@@ -9,12 +9,12 @@ class BookingController extends Controller
 {
     public function index()
     {
-        return view('/list', ['bookings' => Booking::all()]);
+        return view('list', ['bookings' => Booking::all()]);
     }
 
     public function add()
     {
-        return view('/add');
+        return view('add');
     }
 
     public function create(Request $request)
@@ -41,12 +41,12 @@ class BookingController extends Controller
         $booking->country = $request->country;
         $booking->status = $request->status;
         $booking->save();
-        return redirect('/');
+        return redirect('/list');
     }
 
     public function edit(Booking $booking)
     {
-        return view('/edit', ['booking' => $booking]);
+        return view('edit', ['booking' => $booking]);
     }
 
     public function update(Request $request, Booking $booking)
@@ -72,7 +72,7 @@ class BookingController extends Controller
         $booking->country = $request->country;
         $booking->status = $request->status;
         $booking->save();
-        return redirect('/');
+        return redirect('/list');
     }
 
     public function delete(Request $request, Booking $booking)

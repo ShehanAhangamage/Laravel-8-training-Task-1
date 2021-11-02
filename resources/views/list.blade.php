@@ -9,8 +9,12 @@
             <div class="flex">
                 <div class="flex-auto text-2xl mb-4">Booking List</div>
 
-                <div class="flex-auto text-right mt-2">
+                <div class="flex-none text-right mt-2">
                     <a href="/add" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add new Booking</a>
+                </div>
+
+                <div class="flex-none text-right ml-4 mt-2">
+                    <a href="/logout" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Log Out</a>
                 </div>
             </div>
             <table class="w-full text-md rounded mb-4">
