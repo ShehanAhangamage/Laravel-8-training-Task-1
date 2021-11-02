@@ -23,7 +23,7 @@ class BookingFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
             'address' => $this->faker->address(),
             'city' => $this->faker->city(),
-            'zip' => Str::random(5),
+            'zip' => $this->faker->numerify('#####'),
             'country' => $this->faker->country(),
             'status' => 'reserved',
         ];
