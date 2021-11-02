@@ -3,9 +3,12 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+use App\Models\Booking;
 
 class BookingFactory extends Factory
 {
+    protected $model = Booking::class;
     /**
      * Define the model's default state.
      *
@@ -20,7 +23,7 @@ class BookingFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
             'address' => $this->faker->address(),
             'city' => $this->faker->city(),
-            'zip' => $this->faker->postcode(),
+            'zip' => Str::random(5),
             'country' => $this->faker->country(),
             'status' => 'reserved',
         ];
