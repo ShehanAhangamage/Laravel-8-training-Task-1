@@ -97,9 +97,9 @@
                 <div class="form-group">
                     <label for="status">Status</label>
                     <select name="status" class="@error('status') bg-red-100 border-red-400 @else bg-gray-100 border-gray-400 @enderror rounded border leading-normal resize-none w-full mb-2 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white">
-                        <option value="reserves">Reserved</option>
-                        <option value="checked_in">Checked-In</option>
-                        <option value="checked_out">Checked-Out</option>
+                        <option value="reserves" @if(old('status') == "reserves" || $booking->status == "reserves") selected @endif >Reserved</option>
+                        <option value="checked_in" @if(old('status') == "checked_in" || $booking->status == "reserves") selected @endif >Checked-In</option>
+                        <option value="checked_out" @if(old('status') == "checked_out" || $booking->status == "reserves") selected @endif >Checked-Out</option>
                     </select>
                     @if ($errors->has('status'))
                     <span class="text-red-500">{{ $errors->first('status') }}</span>
