@@ -1,6 +1,6 @@
 # Laravel 8 Training Task-1
 
-##### Run below commands to run
+## Run below commands to run
 
 composer install
 
